@@ -43,6 +43,9 @@ nav {
 
 a.nav-link {
     color: var(--blanc) !important;
+          transition: opacity 0.3s ease;
+          opacity: 1;
+
 }
 
 .fa-bars {
