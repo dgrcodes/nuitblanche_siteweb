@@ -6,6 +6,8 @@
     --turquoise-pale: #6994a1;
     --bleu-pale: #bbdee9;
     --blanc: #fafbfb;
+        --ani-speed: 1.5s;
+    --ani-delay: 0.5s;
 }
 * {
     margin: 0;
@@ -20,13 +22,23 @@ section {
 
 a {
     text-decoration: none;
+    opacity: 1;
+      transition: opacity 0.3s ease;
 }
+
+a:hover{
+    opacity: 0.5 !important;
+}
+
+
 
 /* -------------------- NAV -------------------- */
 
 nav {
-    background: none;
-    position: sticky;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 a.nav-link {
@@ -56,7 +68,10 @@ a.nav-link.active, .navbar-brand {
 /* -------------------- SECTION HERO -------------------- */
 video {
     position: absolute;
-    z-index: -100;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 #section-hero {
     background-repeat: no-repeat;
@@ -113,11 +128,71 @@ h2 {
     align-items: center;
 }
 
+#mouse-scroll {
+  display: block;
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+#mouse-scroll span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  margin: 0 0 5px 8px;
+}
+
+#mouse-scroll .down-arrow-1 {
+  animation: mouse-scroll 2s ease-in-out infinite;
+}
+
+#mouse-scroll div {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
 
 
 /* -------------------- SECTION MAP -------------------- */
 
+#section-map {
+    background-color: var(--bleu-fonce);
+}
 
+/* -------------------- FOOTER -------------------- */
+footer {
+    background-color: var(--turquoise-pale);
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color : var(--bleu-pale)
+}
+
+footer a {
+    color: white;
+    padding: 0 10px;
+}
 
 /* -------------------- RESPONSIVE MOBILE -------------------- */
 @media (max-width: 768px) {
