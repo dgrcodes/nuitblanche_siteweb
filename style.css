@@ -59,7 +59,6 @@ video {
     z-index: -100;
 }
 #section-hero {
-    /*background-image: url(#);*/
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--blanc);
@@ -73,23 +72,31 @@ video {
     justify-content: center;
     height: 30vh;
     width: 100%;
-   display: grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
 }
 
 .hero-texte {
-    height: 30%;
+    height: 60%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-        text-align: center;
+    text-align: center;
 }
+
 h1 {
     color: var(--blanc);
     font-size: 10em;
     text-transform: uppercase;
+}
+
+h2 {
+    background-color: var(--turquoise-pale);
+    color: #042a3a;
+    padding: 0px 10px;
+    border-radius: 25px 25px;
 }
 
 .button-hero {
@@ -97,7 +104,6 @@ h1 {
     background-color: var(--bleu-pale);
     padding: 10px 30px;
     border-radius: 50px 50px;
-
 }
 
 .hero-texte-flex {
@@ -105,10 +111,54 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 
 
 /* -------------------- SECTION MAP -------------------- */
 
+
+
+/* -------------------- RESPONSIVE MOBILE -------------------- */
+@media (max-width: 768px) {
+
+    /* NAV */
+    .nav-item {
+        margin-left: 0;
+    }
+
+    /* HERO */
+    #hero-texte {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        height: auto;
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    .hero-texte {
+        height: auto;
+    }
+
+    .button-hero {
+        padding: 8px 20px;
+    }
+
+    /* VIDEO */
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 2.5em;
+    }
+}

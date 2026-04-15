@@ -1,3 +1,4 @@
+// ------FONCTIONS TEXTE HERO ------- //
 var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
@@ -31,7 +32,7 @@ var TxtType = function(el, toRotate, period) {
         } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
-        delta = 500;
+        delta = 800;
         }
 
         setTimeout(function() {
@@ -54,3 +55,30 @@ var TxtType = function(el, toRotate, period) {
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
         document.body.appendChild(css);
     };
+
+    // ------ FONCTION TIMER HERO --------
+function startCountdown() {
+  const target = new Date("2026-05-02T00:00:00");
+
+  const update = () => {
+    const diff = target - new Date();
+
+    if (diff <= 0) {
+      document.getElementById("countdown").textContent = "C'est aujourd'hui !";
+      return;
+    }
+
+    const days    = Math.floor(diff / 86400000);
+    const hours   = Math.floor((diff % 86400000) / 3600000);
+    const minutes = Math.floor((diff % 3600000) / 60000);
+    const seconds = Math.floor((diff % 60000) / 1000);
+
+    document.getElementById("countdown").textContent = 
+      `${String(days).padStart(2,"0")}j ${String(hours).padStart(2,"0")}h ${String(minutes).padStart(2,"0")}m ${String(seconds).padStart(2,"0")}s`;
+  };
+
+  update();
+  setInterval(update, 1000);
+}
+
+startCountdown();
