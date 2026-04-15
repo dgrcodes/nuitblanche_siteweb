@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     font-family: Helvetica, sans-serif;
-    overflow-x: ;
+    overflow-x: hidden;
 }
 section {
     width: 100%;
@@ -107,6 +107,8 @@ h1 {
     align-items: center;
 
 }
+
+
 
 /* -------------------- SECTION MAP -------------------- */
 
