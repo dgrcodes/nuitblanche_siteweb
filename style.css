@@ -179,6 +179,19 @@ h2 {
 
 #section-map {
     background-color: var(--bleu-fonce);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#map { 
+    width: 50%;
+    height: 80%; 
+filter: saturate(0.7);
+}
+
+#map * {
+    overflow: visible;
 }
 
 /* -------------------- FOOTER -------------------- */
