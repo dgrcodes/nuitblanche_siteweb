@@ -30,7 +30,9 @@ a:hover{
     opacity: 0.5 !important;
 }
 
-
+body {
+    margin: 0 auto;
+}
 
 /* -------------------- NAV -------------------- */
 
