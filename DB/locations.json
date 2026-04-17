@@ -6,8 +6,8 @@
       "nom": "Agora des Arts",
       "adresse": "170, avenue Murdoch",
       "horaires": "19 h a 2 h",
-      "lat": 48.2466332,
-      "lng": -79.0167293,
+      "lat": 48.24650080513203,
+      "lng": -79.01706423132681,
       "categorie": "diffusion",
       "activites": [
         {
@@ -61,8 +61,8 @@
       "nom": "Petit Theatre du Vieux Noranda",
       "adresse": "146, 8e rue",
       "horaires": "19 h a 2 h",
-      "lat": 48.239,
-      "lng": -79.0227,
+      "lat": 48.247322960275966,
+      "lng": -79.01605676016214,
       "categorie": "projection",
       "activites": [
         {
@@ -80,8 +80,8 @@
       "nom": "Musee d'art de Rouyn-Noranda",
       "adresse": "230, avenue Carter",
       "horaires": "19 h a 2 h",
-      "lat": 48.2486514,
-      "lng": -79.0186012,
+      "lat": 48.23687911722301,
+      "lng": -79.0219426,
       "categorie": "musee",
       "activites": [
         {
@@ -110,8 +110,8 @@
       "nom": "Pixel - Espace videoludique",
       "adresse": "140 Av. Principale, Rouyn-Noranda, QC J9X 4P5",
       "horaires": "20 h a 3 h",
-      "lat": 48.23656,
-      "lng": -79.02311,
+      "lat": 48.23929605965216, 
+      "lng": -79.02020235767225,
       "categorie": "jeu-video",
       "activites": [
         {
@@ -129,8 +129,8 @@
       "nom": "Bibliotheque municipale",
       "adresse": "201, avenue Dallaire",
       "horaires": "17 h a minuit",
-      "lat": 48.2368606,
-      "lng": -79.0219426,
+      "lat": 48.23718914839716 ,
+      "lng": -79.0223333364188,
       "categorie": "litterature",
       "activites": [
         {
@@ -149,8 +149,8 @@
       "nom": "Livresse, bar-librairie",
       "adresse": "Coin Murdoch et 6e Rue",
       "horaires": "18 h a 3 h",
-      "lat": 48.2487,
-      "lng": -79.0188,
+      "lat": 48.2486700487042, 
+      "lng": -79.01874971156477,
       "categorie": "atelier",
       "activites": [
         {
@@ -163,8 +163,8 @@
       "nom": "Studio CopperCrib",
       "adresse": "10 Rue Perreault E",
       "horaires": "18 h a 3 h",
-      "lat": 48.2449,
-      "lng": -79.0175,
+      "lat": 48.238026654493304,
+      "lng": -79.01979147365628,
       "categorie": "performance",
       "activites": [
         {
