@@ -718,6 +718,10 @@ footer a {
         position: relative;
     }
 
+     video {
+        pointer-events: none;
+    }
+    
     #map-legende {
         padding: 0 24px;
     }
