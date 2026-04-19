@@ -1,3 +1,4 @@
+
 // ------FONCTIONS TEXTE HERO ------- //
 var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;

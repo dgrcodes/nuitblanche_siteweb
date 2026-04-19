@@ -1,7 +1,7 @@
 /* -------------------- GENERAL -------------------- */
 :root {
     --noir: #010b0f;
-    --bleu-fonce: #042a3a;
+    --bleu-fonce: #051c35;
     --turquoise-fonce: #1e4856;
     --turquoise-pale: #6994a1;
     --bleu-pale: #bbdee9;
@@ -10,6 +10,8 @@
     --ani-delay: 0.5s;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 b {
     color: var(--bleu-pale);
 }
@@ -17,11 +19,12 @@ b {
 * {
     margin: 0;
     padding: 0;
-    font-family: Helvetica, sans-serif;
+  font-family: "Gabarito", sans-serif;
     overflow-x: hidden;
 }
 
 section {
+    width: 100%;
     width: 100%;
     height: 100vh;
 }
@@ -80,6 +83,31 @@ a.nav-link.active,
 
 
 /* -------------------- SECTION HERO -------------------- */
+
+#cursor {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--blanc);
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.2s, transform 0.15s ease, width 0.15s ease, height 0.15s ease;
+}
+
+#cursor-follower {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(187, 222, 233, 0.6);
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: left 0.1s ease, top 0.1s ease, width 0.2s ease, height 0.2s ease;
+}
+
 video {
     position: absolute;
     z-index: -1;
@@ -219,7 +247,8 @@ h2 {
 
 #section-map h3 {
     margin-bottom: 10px;
-    color: var(--blanc);
+    color: var(--bleu-pale);
+    font-weight: bolder;
 }
 
 #map-legend {
@@ -277,10 +306,12 @@ h2 {
     position: relative;
     padding: 36px;
     overflow-y: auto;
+    max-height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
 
 #map-info::before {
     content: '';
@@ -398,6 +429,8 @@ h2 {
     padding: 80px 40px;
     gap: 60px;
     background-color: var(--bleu-pale);
+      height: auto;
+    min-height: auto;
 }
 
 #réseaux-info {
@@ -415,6 +448,8 @@ h2 {
     font-weight: 700;
     line-height: 1.1;
     margin: 0;
+    height: auto;
+    overflow-y: hidden;
 }
 
 #réseaux-info p {
@@ -510,6 +545,8 @@ footer a {
     
 
     /* HERO */
+
+    
     #hero-texte {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, auto);
@@ -524,6 +561,7 @@ footer a {
 
     .hero-texte {
         height: auto;
+        z-index: 9999;
     }
 
     .button-hero {
@@ -631,6 +669,7 @@ footer a {
         padding: 60px 24px;
         gap: 40px;
         height: auto;
+    min-height: auto;
     }
 
     #réseaux-info {
@@ -707,7 +746,8 @@ footer a {
         flex-direction: column;
         padding: 60px 40px;
         gap: 40px;
-        height: auto;
+    height: auto;
+    min-height: auto;
     }
 
     #réseaux-info {

@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NuitBlancheRouyn-Noranda</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -15,9 +18,12 @@
   <link rel="stylesheet" href="style.css">
 
 
+
 </head>
 
 <body>
+  <div id="cursor"></div>
+<div id="cursor-follower"></div>
 
   <header>
     <nav class="navbar navbar-expand-md bg-transparent w-100">
@@ -32,10 +38,10 @@
           <!-- ul gauche -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#section-map">map interactive</a>
+              <a class="nav-link" href="#section-map">MAP INTERACTIVE</a>
             </li>
                         <li class="nav-item">
-              <a class="nav-link" href="#reseaux-sociaux">réseaux sociaux</a>
+              <a class="nav-link" href="#reseaux-sociaux">RÉSEAUX SOCIAUX</a>
             </li>
           </ul>
 
@@ -58,6 +64,7 @@
       </div>
     </nav>
     <section id="section-hero">
+ 
       <!-- Mettre une vidéo en background -->
       <video loop autoplay src="./assets/medias/video_teste_hero.mp4"></video>
       <div class="hero-texte">
@@ -85,7 +92,7 @@
   </header>
   <section id="section-map">
     <div id="map-legende">
-      <h3>Légende</h3>
+      <h3>LÉGENDE</h3>
       <ul id="map-legend">
   <li><a class="reset-link" onclick="resetMarkerOpacity()" style="
   border: 1.5px solid var(--blanc);
@@ -157,6 +164,8 @@
     crossorigin="anonymous"></script>
   <script src="script.js"></script>
   <script src="map.js"></script>
+<script src="./scripts/cursor.js"></script>
+
 </body>
 
 </html>
