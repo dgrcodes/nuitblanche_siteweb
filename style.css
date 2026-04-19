@@ -224,7 +224,8 @@ h2 {
     grid-template-rows: auto 1fr;
     height: 100vh;
     padding-top: 64px;
-    padding-bottom: 64px;
+    padding-bottom: 0;
+    box-sizing: border-box;
 }
 
 .bottom-row {
@@ -308,7 +309,8 @@ h2 {
 #map-info {
     position: relative;
     padding: 36px;
-    overflow-y: auto;
+overflow: hidden;
+font-size: clamp(0.6rem, 1.2vw, 1rem);
     max-height: 100%;
     background-size: cover;
     background-position: center;
@@ -335,7 +337,7 @@ h2 {
 }
 
 #map-info h3 {
-    font-size: 2rem;
+ font-size: clamp(1rem, 2vw, 2rem);
     font-weight: 700;
     color: var(--blanc);
     margin: 0 0 4px 0;
@@ -350,7 +352,7 @@ h2 {
     margin-bottom: 24px;
     margin-top: 8px;
     color: var(--blanc);
-font-size: 0.85rem;
+ font-size: clamp(0.6rem, 0.8vw, 0.85rem);
     opacity: 1;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -391,7 +393,7 @@ font-size: 0.85rem;
 }
 
 .activite-titre {
-   font-size: 1rem;
+ font-size: clamp(0.7rem, 1vw, 1rem);
     font-weight: 500;
     margin: 0;
     color: var(--blanc);
@@ -415,7 +417,7 @@ font-size: 0.85rem;
 }
 
 .activite-details {
-font-size: 0.85rem;
+ font-size: clamp(0.6rem, 0.9vw, 0.85rem);
     opacity: 0.8;
     margin: 0;
     padding-left: 0;
@@ -709,10 +711,14 @@ footer a {
 }
 /* -------------------- RESPONSIVE TABLETTE -------------------- */
 @media (max-width: 1024px) and (min-width: 769px) {
+.wrap {
+    font-size: 0.6em;
 
+}
     #section-map {
         grid-template-rows: auto 1fr;
-        height: 100vh;
+        height: auto;
+        min-height: 100vh;
         padding-top: 20px;
         padding-bottom: 0;
         position: relative;
@@ -721,7 +727,7 @@ footer a {
      video {
         pointer-events: none;
     }
-    
+
     #map-legende {
         padding: 0 24px;
     }
@@ -740,11 +746,11 @@ footer a {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         position: relative;
-        height: 100%;
+        height: auto;
     }
 
     #map {
-        height: 100%;
+        height: 50vh;
         width: 100%;
     }
 
@@ -753,14 +759,16 @@ footer a {
         bottom: 0;
         left: 0;
         right: 0;
-        height: 40%;
         padding: 24px;
-        overflow-y: auto;
+ overflow-y: visible;
+        max-height: none;
         border-radius: 20px 20px 0 0;
         box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
         z-index: 500;
     }
-
+ #activites-nav {
+        overflow-y: visible;
+    }
     #reseaux-sociaux {
         flex-direction: column;
         padding: 60px 40px;
