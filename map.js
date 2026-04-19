@@ -43,17 +43,18 @@ function buildLegendItem(lieu) {
   var link = document.createElement('a');
   const color = getCategorieColor(lieu.categorie);
 
-  link.href = '#';
+link.href = '#';
   link.textContent = lieu.nom;
   link.style.cursor = 'pointer';
-  link.style.border = `1.5px solid ${color}`;
+  link.style.border = 'none';
   link.style.color = color;
-  link.style.borderRadius = '20px';
-  link.style.padding = '3px 12px';
+  link.style.borderRadius = '0';
+  link.style.padding = '3px 4px';
   link.style.fontSize = '0.8rem';
-  link.style.transition = 'background-color 0.2s, color 0.2s';
-  link.style.textTransform = 'capitalize';
+  link.style.transition = 'color 0.2s';
+  link.style.textTransform = 'uppercase';
   link.dataset.color = color;
+  link.dataset.fontWeight = "bolder";
 
   link.addEventListener('click', function (event) {
     event.preventDefault();
@@ -63,11 +64,13 @@ function buildLegendItem(lieu) {
       a.style.backgroundColor = 'transparent';
       a.style.color = a.dataset.color;
       a.style.fontWeight = 'normal';
+      
     });
 
-    link.style.backgroundColor = color;
-    link.style.color = '#010b0f';
-    link.style.fontWeight = '600';
+link.style.border = '1.5px solid ' + color;
+link.style.borderRadius = '25px';
+link.style.padding = '3px 12px';
+link.style.fontWeight = '800';
 
     map.eachLayer(function (layer) {
       if (layer instanceof L.Marker) {
@@ -88,7 +91,7 @@ function buildLegendItem(lieu) {
 map.on('click', function (e) {
   if (!e.originalEvent._stopped) {
     resetMarkerOpacity();
-    map.setView([48.2430, -79.0227], 15);
+map.setView([48.2430, -79.0227], 15);
   }
 });
 
@@ -123,16 +126,19 @@ function resetMarkerOpacity() {
     }
   });
 
-  document.querySelectorAll('#map-legend a:not(.reset-link)').forEach(function (a) {
-    a.style.backgroundColor = 'transparent';
-    a.style.color = a.dataset.color;
-    a.style.fontWeight = 'normal';
-  });
+ document.querySelectorAll('#map-legend a:not(.reset-link)').forEach(function (a) {
+  a.style.backgroundColor = 'transparent';
+  a.style.color = a.dataset.color;
+  a.style.fontWeight = 'normal';
+  a.style.border = 'none';
+  a.style.borderRadius = '0';
+  a.style.padding = '3px 4px';
+});
 
-  var resetLink = document.querySelector('.reset-link');
-  resetLink.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+var resetLink = document.querySelector('.reset-link');
+resetLink.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
 
-  resetMapInfo();
+resetMapInfo();
 }
 
 window.resetMarkerOpacity = resetMarkerOpacity;
@@ -152,8 +158,8 @@ function addLieuMarker(lieu) {
       border: 2px solid white;
       box-shadow: 0 0 4px rgba(0,0,0,0.4);
     "></div>`,
-    iconSize: [14, 14],
-    iconAnchor: [7, 7]
+    iconSize: [30, 30],
+    iconAnchor: [15, 15]
   });
 
   const marker = L.marker([lieu.lat, lieu.lng], { icon })
@@ -170,12 +176,15 @@ marker.on('click', function () {
 
 function updateMapInfo(lieu) {
   // Reset légende
-  document.querySelectorAll('#map-legend a').forEach(function (a) {
-    if (a.classList.contains('reset-link')) return;
-    a.style.backgroundColor = 'transparent';
-    a.style.color = a.dataset.color;
-    a.style.fontWeight = 'normal';
-  });
+document.querySelectorAll('#map-legend a').forEach(function (a) {
+  if (a.classList.contains('reset-link')) return;
+  a.style.backgroundColor = 'transparent';
+  a.style.color = a.dataset.color;
+  a.style.fontWeight = 'bolder';
+  a.style.border = 'none';
+  a.style.borderRadius = '25px';
+  a.style.padding = '3px 4px';
+});
 
   // Highlight le bon item dans la légende
   document.querySelectorAll('#map-legend a').forEach(function (a) {
