@@ -249,6 +249,7 @@ h2 {
     margin-bottom: 10px;
     color: var(--bleu-pale);
     font-weight: bolder;
+    overflow-y: hidden;
 }
 
 #map-legend {
