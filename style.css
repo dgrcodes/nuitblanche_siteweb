@@ -176,7 +176,6 @@ h2 {
   }
 }
 
-
 /* -------------------- SECTION MAP -------------------- */
 
 #section-map {
@@ -196,6 +195,28 @@ filter: saturate(0.7);
     overflow: visible;
 }
 
+#map-info {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#map-legend {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    color: var(--blanc);
+}
+#section-map h3 {
+    margin-bottom: 10px;
+    color: var(--blanc);
+}
+#map-legend a {
+    color: var(--blanc);
+    cursor: pointer;
+    text-transform:capitalize ;
+}
 /* -------------------- FOOTER -------------------- */
 footer {
     background-color: var(--turquoise-pale);
@@ -211,7 +232,6 @@ footer a {
     color: white;
     padding: 0 10px;
 }
-
 /* -------------------- RESPONSIVE MOBILE -------------------- */
 @media (max-width: 768px) {
 
