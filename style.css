@@ -10,6 +10,10 @@
     --ani-delay: 0.5s;
 }
 
+b {
+    color: var(--bleu-pale);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -38,11 +42,13 @@ body {
 
 /* -------------------- NAV -------------------- */
 
-nav {
-    position: fixed;
+.navbar {
+    position: absolute;
     top: 0;
     width: 100%;
     z-index: 1000;
+    background-color: rgba(3, 5, 41, 0.166) !important;
+    font-size: 1.2em;
 }
 
 a.nav-link {
@@ -186,33 +192,28 @@ h2 {
 
 #section-map {
     background-color: var(--bleu-fonce);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    height: 100vh;
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
-#map {
-    width: 50%;
-    height: 80%;
-    filter: saturate(0.7);
+.bottom-row {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
 }
 
-#map * {
-    overflow: visible;
-}
 
-#map-info {
-    width: 50%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-}
 
-#map-legend {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-    color: var(--blanc);
+
+/* -------------------- LÉGENDE -------------------- */
+
+#map-legende {
+    grid-row: 1;
+    padding: 0 40px;
 }
 
 #section-map h3 {
@@ -220,15 +221,260 @@ h2 {
     color: var(--blanc);
 }
 
+#map-legend {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    gap: 8px;
+    align-items: center;
+}
+
+#map-legend li {
+    display: flex;
+}
+
 #map-legend a {
+    text-decoration: none;
+    white-space: nowrap;
     color: var(--blanc);
     cursor: pointer;
     text-transform: capitalize;
 }
 
+#map-legend .reset-link {
+    color: var(--blanc);
+    font-size: 0.8rem;
+    border: none;
+    padding: 3px 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    transition: background-color 0.2s;
+}
+
+#map-legend .reset-link:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* -------------------- MAP -------------------- */
+
+#map {
+    filter: saturate(2);
+    height: 100%;
+}
+
+#map * {
+    overflow: visible;
+}
+
+/* -------------------- MAP INFO -------------------- */
+
+#map-info {
+    position: relative;
+    padding: 36px;
+    overflow-y: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#map-info::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(3, 17, 53, 0.4 ) 0%,
+        rgba(3, 16, 49, 0.75) 40%,
+        rgba(3, 15, 46, 0.95) 100%
+    );
+    z-index: 0;
+}
+
+#map-info > * {
+    position: relative;
+    z-index: 1;
+}
+
+#map-info h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--blanc);
+    margin: 0 0 4px 0;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.map-info-meta {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 24px;
+    margin-top: 8px;
+    color: var(--blanc);
+    font-size: 1.1rem;
+    opacity: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.map-info-meta .adresse::after {
+    content: '·';
+    margin-left: 16px;
+}
+
+#activites-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    overflow-y: auto;
+    color: var(--blanc);
+}
+
+.activites-horaire-global {
+    display: none;
+}
+
+.activite-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.activite-block:first-child {
+    padding-top: 0;
+}
+
+.activite-block:last-child {
+    border-bottom: none;
+}
+
+.activite-titre {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0;
+    color: var(--blanc);
+    line-height: 1.3;
+}
+
+.activite-heure {
+    display: inline-block;
+    width: fit-content;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--bleu-fonce);
+    background-color: rgba(187, 222, 233, 0.6);
+    border: 1px solid rgba(187, 222, 233, 0.25);
+    border-radius: 25px;
+    padding: 2px 8px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.activite-details {
+    font-size: 1.05rem;
+    opacity: 0.8;
+    margin: 0;
+    padding-left: 0;
+    color: var(--blanc);
+    line-height: 1.4;
+}
+
+/* -------------------- SECTION RÉSEAUX -------------------- */
+
+#reseaux-sociaux {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+    gap: 60px;
+    background-color: var(--bleu-pale);
+}
+
+#réseaux-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 24px;
+    flex: 1;
+    max-width: 700px;
+}
+
+#réseaux-info h4 {
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+}
+
+#réseaux-info p {
+    font-size: 1.8rem;
+    opacity: 0.6;
+    margin: 0;
+}
+
+#reseaux-boutons {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.reseaux-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1.5px solid currentColor;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.reseaux-btn:hover {
+    background-color: var(--blanc);
+    color: var(--bleu-fonce);
+    border-color: var(--blanc);
+}
+
+.reseaux-btn.instagram { 
+    background-color: var(--turquoise-pale);
+    border-color: var(--turquoise-pale);
+    color: var(--bleu-pale);
+}
+
+.reseaux-btn.facebook { 
+    background-color: var(--bleu-fonce);
+    border-color: var(--bleu-fonce);
+    color: var(--bleu-pale);
+}
+
+.reseaux-btn.tiktok { 
+    background-color: var(--noir);
+    border-color: var(--noir);
+    color: var(--bleu-pale);
+}
+
+
+#reseaux-insta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    max-width: 540px;
+}
+
 /* -------------------- FOOTER -------------------- */
 footer {
-    background-color: var(--turquoise-pale);
+    background-color: var(--bleu-fonce);
     padding: 10px 10px;
     display: flex;
     flex-direction: column;
@@ -238,17 +484,28 @@ footer {
 }
 
 footer a {
-    color: white;
+    color: var(--bleu-pale);
     padding: 0 10px;
 }
+.navbar .nav-link .bi {
+    font-size: 1.2rem;
+}
+
+.navbar .nav-item {
+    margin-left: 10px;
+}
+
 
 /* -------------------- RESPONSIVE MOBILE -------------------- */
 @media (max-width: 768px) {
 
     /* NAV */
-    .nav-item {
+  .navbar .nav-item {
         margin-left: 0;
+        padding: 4px 8px;
     }
+
+    
 
     /* HERO */
     #hero-texte {
@@ -277,11 +534,203 @@ footer a {
         height: 100%;
         object-fit: cover;
     }
+
+    /* -------------------- SECTION MAP MOBILE -------------------- */
+
+
+    #section-map {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 20px;
+        padding-bottom: 0;
+        grid-template-rows: auto 1fr;
+    }
+
+ #map-legende {
+    padding: 0 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+#map-legend {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 6px;
+    padding-bottom: 8px;
+    width: max-content;
+}
+
+    .bottom-row {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: auto;
+        position: relative;
+    }
+
+    #map {
+        height: 50vh;
+        width: 100%;
+    }
+
+ #map-info {
+        position: relative;
+        margin-top: -30px;
+        height: auto;
+        overflow-y: visible;
+        padding: 20px;
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+        z-index: 500;
+        background: linear-gradient(
+            to bottom,
+            rgba(3, 15, 46, 0.97) 0%,
+            rgba(3, 17, 53, 1) 100%
+        );
+        isolation: isolate;
+    }
+
+    #map-info::before {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to bottom,
+            rgba(3, 15, 46, 0.6) 0%,
+            rgba(3, 17, 53, 0.97) 40%,
+            rgba(3, 17, 53, 1) 100%
+        );
+        border-radius: 20px 20px 0 0;
+    }
+
+
+
+    #map-info h3 {
+        font-size: 1.8rem;
+    }
+
+    .map-info-meta {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+
+    .activite-titre {
+        font-size: 1rem;
+    }
+
+    .activite-details {
+        font-size: 0.85rem;
+    }
+
+    /* -------------------- RÉSEAUX SOCIAUX MOBILE -------------------- */
+
+    #reseaux-sociaux {
+        flex-direction: column;
+        padding: 60px 24px;
+        gap: 40px;
+        height: auto;
+    }
+
+    #réseaux-info {
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    #réseaux-info h4 {
+        font-size: 2.5rem;
+    }
+
+    #réseaux-info p {
+        font-size: 1.2rem;
+    }
+
+    #reseaux-boutons {
+        justify-content: center;
+    }
+
+ #reseaux-insta {
+        max-width: 100%;
+        width: 100%;
+        transform: scale(0.85);
+        transform-origin: top center;
+    }
+}
+/* -------------------- RESPONSIVE TABLETTE -------------------- */
+@media (max-width: 1024px) and (min-width: 769px) {
+
+    #section-map {
+        grid-template-rows: auto 1fr;
+        height: 100vh;
+        padding-top: 20px;
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    #map-legende {
+        padding: 0 24px;
+    }
+
+    #map-legend {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .bottom-row {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        position: relative;
+        height: 100%;
+    }
+
+    #map {
+        height: 100%;
+        width: 100%;
+    }
+
+    #map-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40%;
+        padding: 24px;
+        overflow-y: auto;
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+        z-index: 500;
+    }
+
+    #reseaux-sociaux {
+        flex-direction: column;
+        padding: 60px 40px;
+        gap: 40px;
+        height: auto;
+    }
+
+    #réseaux-info {
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    #reseaux-boutons {
+        justify-content: center;
+    }
+
+    #reseaux-insta {
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
 
     h1 {
         font-size: 2.5em;
+    }
+
+    #réseaux-info h4 {
+        font-size: 2rem;
     }
 }

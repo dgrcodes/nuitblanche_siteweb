@@ -5,37 +5,37 @@
       "id": "agora-des-arts",
       "nom": "Agora des Arts",
       "adresse": "170, avenue Murdoch",
-      "horaires": "19 h a 2 h",
+      "horaires": "19 h à 2 h",
       "lat": 48.24650080513203,
       "lng": -79.01706423132681,
-      "categorie": "diffusion",
+      "categorie": "Diffusion",
       "activites": [
         {
-          "titre": "Jeu d'evasion The Room",
-          "details": "Finissants et finissantes au baccalaureat en creation numerique"
+          "titre": "Jeu d'évasion The Room",
+          "details": "Finissants et finissantes au baccalauréat en création numérique"
         },
         {
-          "titre": "Experience et Jeu video Les mots de l'ame",
-          "details": "Finissants et finissantes a la maitrise en creation numerique"
+          "titre": "Expérience et Jeu vidéo Les mots de l'âme",
+          "details": "Finissants et finissantes à la maîtrise en création numérique"
         },
         {
-          "titre": "Exposition de travaux etudiants",
-          "details": "Baccalaureat en creation numerique"
+          "titre": "Exposition de travaux étudiants",
+          "details": "Baccalauréat en création numérique"
         }
       ]
     },
     {
       "id": "l-ecart",
-      "nom": "L'Ecart",
+      "nom": "L'Écart",
       "adresse": "167, avenue Murdoch",
-      "horaires": "19 h a 2 h",
+      "horaires": "19 h à 2 h",
       "lat": 48.2470015,
       "lng": -79.0169819,
-      "categorie": "exposition",
+      "categorie": "Exposition",
       "activites": [
         {
-          "titre": "Exposition Regarde comme le monde est beau : des oiseaux migrent a cause du petrole",
-          "details": "Valentin Dumez, etudiant au baccalaureat en creation numerique"
+          "titre": "Exposition Regarde comme le monde est beau : des oiseaux migrent à cause du pétrole",
+          "details": "Valentin Dumez, étudiant au baccalauréat en création numérique"
         },
         {
           "titre": "Exposition Le Cadeau",
@@ -46,115 +46,115 @@
           "details": "Artiste : Kyle Alden Martens"
         },
         {
-          "titre": "Exposition passion partage",
-          "details": "Artistes : Lou-Raphaelle Paul-Allaire et Alex Alisich"
+          "titre": "Exposition passion partagé",
+          "details": "Artistes : Lou-Raphaëlle Paul-Allaire et Alex Alisich"
         },
         {
-          "titre": "Performance Contraintes Severes",
-          "horaire": "A minuit",
-          "details": "Artiste : Simon Turcotte-Begin"
+          "titre": "Performance Contraintes Sévères",
+          "horaire": "À minuit",
+          "details": "Artiste : Simon Turcotte-Bégin"
         }
       ]
     },
     {
       "id": "petit-theatre-du-vieux-noranda",
-      "nom": "Petit Theatre du Vieux Noranda",
+      "nom": "Petit Théâtre du Vieux-Noranda",
       "adresse": "146, 8e rue",
-      "horaires": "19 h a 2 h",
+      "horaires": "19 h à 2 h",
       "lat": 48.247322960275966,
       "lng": -79.01605676016214,
-      "categorie": "projection",
+      "categorie": "Projection",
       "activites": [
         {
-          "titre": "Soiree de projection",
-          "details": "100 ans de cinema a Rouyn-Noranda"
+          "titre": "Soirée de projection",
+          "details": "100 ans de cinéma à Rouyn-Noranda"
         },
         {
           "titre": "Installation sonore immersive",
-          "details": "Finissants et finissantes au baccalaureat en creation numerique"
+          "details": "Finissants et finissantes au baccalauréat en création numérique"
         }
       ]
     },
     {
       "id": "musee-art-rouyn-noranda",
-      "nom": "Musee d'art de Rouyn-Noranda",
+      "nom": "Musée d'art de Rouyn-Noranda",
       "adresse": "230, avenue Carter",
-      "horaires": "19 h a 2 h",
+      "horaires": "19 h à 2 h",
       "lat": 48.23687911722301,
       "lng": -79.0219426,
-      "categorie": "musee",
+      "categorie": "Musée",
       "activites": [
         {
-          "titre": "Projet experientiel ISALIVE",
-          "details": "Finissants et finissantes a la maitrise en creation numerique"
+          "titre": "Projet expérientiel ISALIVE",
+          "details": "Finissants et finissantes à la maîtrise en création numérique"
         },
         {
-          "titre": "Projet experientiel Art'mur",
-          "details": "Finissants et finissantes au baccalaureat en creation numerique"
+          "titre": "Projet expérientiel Art'mur",
+          "details": "Finissants et finissantes au baccalauréat en création numérique"
         },
         {
-          "titre": "Exposition permanente du MA Sous la lumiere du Nord"
+          "titre": "Exposition permanente du MA Sous la lumière du Nord"
         },
         {
           "titre": "Exposition Point final",
           "details": "Finissants et finissantes au Certificat en arts plastiques de l'UQAT"
         },
         {
-          "titre": "Reserve ouverte",
-          "details": "Plus de 2 400 oeuvres a decouvrir"
+          "titre": "Réserve ouverte",
+          "details": "Plus de 2 400 œuvres à découvrir"
         }
       ]
     },
     {
       "id": "pixel-espace-videoludique",
-      "nom": "Pixel - Espace videoludique",
+      "nom": "Pixel - Espace vidéoludique",
       "adresse": "140 Av. Principale, Rouyn-Noranda, QC J9X 4P5",
-      "horaires": "20 h a 3 h",
-      "lat": 48.23929605965216, 
+      "horaires": "20 h à 3 h",
+      "lat": 48.23929605965216,
       "lng": -79.02020235767225,
-      "categorie": "jeu-video",
+      "categorie": "Jeux-Vidéos",
       "activites": [
         {
           "titre": "Terrain de jeux nocturnes",
-          "details": "Quand la ville s'endort, Le Pixel s'allume!"
+          "details": "Quand la ville s'endort, Le Pixel s'allume !"
         },
         {
-          "titre": "Jeu video Frayures",
-          "details": "Finissants et finissantes a la maitrise en creation numerique"
+          "titre": "Jeu vidéo Frayures",
+          "details": "Finissants et finissantes à la maîtrise en création numérique"
         }
       ]
     },
     {
       "id": "bibliotheque-municipale",
-      "nom": "Bibliotheque municipale",
+      "nom": "Bibliothèque municipale",
       "adresse": "201, avenue Dallaire",
-      "horaires": "17 h a minuit",
-      "lat": 48.23718914839716 ,
+      "horaires": "17 h à minuit",
+      "lat": 48.23718914839716,
       "lng": -79.0223333364188,
-      "categorie": "litterature",
+      "categorie": "Litterature",
       "activites": [
         {
-          "titre": "Parcours ludique La grande enquete de la Nuit blanche (Pre-Nuit blanche pour les petits)",
-          "horaire": "17 h 30 a 20 h 30",
-          "details": "Activite sur inscription : https://calendly.com/biblrn"
+          "titre": "Parcours ludique La grande enquête de la Nuit blanche (Pré-Nuit blanche pour les petits)",
+          "horaire": "17 h 30 à 20 h 30",
+          "details": "Activité sur inscription : https://calendly.com/biblrn"
         },
         {
-          "titre": "Evenement litteraire et loufoque Le Cabaret des EGOS",
-          "horaire": "22 h a minuit"
+          "titre": "Événement littéraire et loufoque Le Cabaret des EGOS",
+          "horaire": "22 h à minuit"
         }
       ]
     },
     {
       "id": "bar-livresse",
-      "nom": "Livresse, bar-librairie",
+      "nom": "Livresse, Bar-Librairie",
       "adresse": "Coin Murdoch et 6e Rue",
-      "horaires": "18 h a 3 h",
-      "lat": 48.2486700487042, 
+      "horaires": "18 h à 3 h",
+      "lat": 48.2486700487042,
       "lng": -79.01874971156477,
-      "categorie": "atelier",
+      "categorie": "Atelier",
       "activites": [
         {
-          "titre": "Atelier de creation Bricoler la nuit"
+          "titre": "Atelier de création Bricoler la nuit"
         }
       ]
     },
@@ -162,22 +162,22 @@
       "id": "studio-coppercrib",
       "nom": "Studio CopperCrib",
       "adresse": "10 Rue Perreault E",
-      "horaires": "18 h a 3 h",
+      "horaires": "18 h à 3 h",
       "lat": 48.238026654493304,
       "lng": -79.01979147365628,
-      "categorie": "performance",
+      "categorie": "Performance",
       "activites": [
         {
-          "titre": "Soiree de performances de danse et DJ set",
-          "details": "Collaboration - Finissants et finissantes au baccalaureat en creation numerique"
+          "titre": "Soirée de performances de danse et DJ set",
+          "details": "Collaboration - Finissants et finissantes au baccalauréat en création numérique"
         },
         {
           "titre": "Performance de danse - Coppercrib",
-          "horaire": "21 h a 21 h 15"
+          "horaire": "21 h à 21 h 15"
         },
         {
           "titre": "Jeu de type Just Dance",
-          "horaire": "21 h 15 a 22 h"
+          "horaire": "21 h 15 à 22 h"
         },
         {
           "titre": "Fermeture des portes",
@@ -185,41 +185,41 @@
         },
         {
           "titre": "Performance de danse - Coppercrib",
-          "horaire": "23 h 30 a 23 h 45"
+          "horaire": "23 h 30 à 23 h 45"
         },
         {
-          "titre": "DJ set - Passion Partage",
-          "horaire": "23 h 45 a 3 h"
+          "titre": "DJ set - Passion Partagé",
+          "horaire": "23 h 45 à 3 h"
         }
       ]
     },
     {
       "id": "studio-adequat",
-      "nom": "Studio Adequat",
+      "nom": "Studio Adéquat",
       "adresse": "173 avenue Principale",
-      "horaires": "21 h 30 a 22 h 30",
+      "horaires": "21 h 30 à 22 h 30",
       "lat": 48.23836,
       "lng": -79.01991,
-      "categorie": "balado",
+      "categorie": "Balado",
       "activites": [
         {
           "titre": "Enregistrement d'un balado devant public",
-          "details": "Special 100e anniversaire de Rouyn-Noranda"
+          "details": "Spécial 100e anniversaire de Rouyn-Noranda"
         }
       ]
     },
     {
       "id": "productions-chien-pas-de-medaille",
-      "nom": "Productions Chien pas de medaille",
+      "nom": "Productions Chien pas de médaille",
       "adresse": "Vieux-Noranda",
-      "horaires": "21 h 30 a 22 h 30",
+      "horaires": "21 h 30 à 22 h 30",
       "lat": null,
       "lng": null,
-      "categorie": "installation",
+      "categorie": "Installation",
       "activites": [
         {
           "titre": "Installation surprise dans le Vieux-Noranda",
-          "details": "Collaboration - Finissants et finissantes au baccalaureat en creation numerique"
+          "details": "Collaboration - Finissants et finissantes au baccalauréat en création numérique"
         }
       ]
     }
