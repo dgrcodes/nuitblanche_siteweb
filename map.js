@@ -153,7 +153,7 @@ function addLieuMarker(lieu) {
     .addTo(map)
     .bindPopup(buildPopupContent(lieu));
 
-  marker.lieuCategorie = lieu.categorie;
+marker.lieuNom = lieu.nom;
 
 marker.on('click', function () {
     updateMapInfo(lieu);
@@ -162,6 +162,33 @@ marker.on('click', function () {
 }
 
 function updateMapInfo(lieu) {
+  // Reset légende
+  document.querySelectorAll('#map-legend a').forEach(function (a) {
+    if (a.classList.contains('reset-link')) return;
+    a.style.backgroundColor = 'transparent';
+    a.style.color = a.dataset.color;
+    a.style.fontWeight = 'normal';
+  });
+
+  // Highlight le bon item dans la légende
+  document.querySelectorAll('#map-legend a').forEach(function (a) {
+    if (a.classList.contains('reset-link')) return;
+    if (a.textContent.toLowerCase() === lieu.nom.toLowerCase()) {
+      a.style.backgroundColor = a.dataset.color;
+      a.style.color = '#010b0f';
+      a.style.fontWeight = '600';
+    }
+  });
+
+  // Griser les autres marqueurs
+  map.eachLayer(function (layer) {
+    if (layer instanceof L.Marker) {
+      var isMatch = layer.lieuNom === lieu.nom;
+      layer.setOpacity(isMatch ? 1 : 0.15);
+      layer.setZIndexOffset(isMatch ? 1000 : 0);
+    }
+  });
+
   document.querySelector('#map-info h3').textContent = lieu.nom;
   document.querySelector('#map-info .adresse').textContent = lieu.adresse;
   document.querySelector('#map-info .horaires').textContent = lieu.horaires;
@@ -191,17 +218,13 @@ function updateMapInfo(lieu) {
 
     block.appendChild(titre);
 
-
     if (activite.details) {
-  const details = document.createElement('p');
-  details.className = 'activite-details';
-
-  // Détecter les URLs et les transformer en liens
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
-  details.innerHTML = activite.details.replace(urlRegex, '<a href="$1" target="_blank" style="color: var(--bleu-pale);">$1</a>');
-
-  block.appendChild(details);
-}
+      const details = document.createElement('p');
+      details.className = 'activite-details';
+      const urlRegex = /(https?:\/\/[^\s]+)/g;
+      details.innerHTML = activite.details.replace(urlRegex, '<a href="$1" target="_blank" style="color: var(--bleu-pale);">$1</a>');
+      block.appendChild(details);
+    }
 
     activitesNav.appendChild(block);
   });
