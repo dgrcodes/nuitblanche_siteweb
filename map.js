@@ -85,6 +85,13 @@ function buildLegendItem(lieu) {
   return li;
 }
 
+map.on('click', function (e) {
+  if (!e.originalEvent._stopped) {
+    resetMarkerOpacity();
+    map.setView([48.2430, -79.0227], 15);
+  }
+});
+
 function resetMapInfo() {
   document.querySelector('#map-info h3').textContent = infoDefault.titre;
 document.querySelector('#map-info .adresse').textContent = infoDefault.adresse;
