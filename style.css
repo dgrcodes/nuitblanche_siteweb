@@ -484,8 +484,8 @@ h2 {
 }
 
 .reseaux-btn.instagram { 
-    background-color: var(--turquoise-pale);
-    border-color: var(--turquoise-pale);
+    background-color: var(--turquoise-fonce);
+    border-color: var(--turquoise-fonce);
     color: var(--bleu-pale);
 }
 
