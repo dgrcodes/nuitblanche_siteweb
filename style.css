@@ -1,20 +1,22 @@
 /* -------------------- GENERAL -------------------- */
 :root {
     --noir: #010b0f;
-    --bleu-fonce : #042a3a;
-    --turquoise-fonce : #1e4856;
+    --bleu-fonce: #042a3a;
+    --turquoise-fonce: #1e4856;
     --turquoise-pale: #6994a1;
     --bleu-pale: #bbdee9;
     --blanc: #fafbfb;
-        --ani-speed: 1.5s;
+    --ani-speed: 1.5s;
     --ani-delay: 0.5s;
 }
+
 * {
     margin: 0;
     padding: 0;
     font-family: Helvetica, sans-serif;
     overflow-x: hidden;
 }
+
 section {
     width: 100%;
     height: 100vh;
@@ -23,10 +25,10 @@ section {
 a {
     text-decoration: none;
     opacity: 1;
-      transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
-a:hover{
+a:hover {
     opacity: 0.5 !important;
 }
 
@@ -45,8 +47,8 @@ nav {
 
 a.nav-link {
     color: var(--blanc) !important;
-          transition: opacity 0.3s ease;
-          opacity: 1;
+    transition: opacity 0.3s ease;
+    opacity: 1;
 
 }
 
@@ -55,7 +57,8 @@ a.nav-link {
 }
 
 
-a.nav-link.active, .navbar-brand {
+a.nav-link.active,
+.navbar-brand {
     color: var(--bleu-pale) !important;
 }
 
@@ -78,6 +81,7 @@ video {
     height: 100%;
     object-fit: cover;
 }
+
 #section-hero {
     background-repeat: no-repeat;
     background-size: cover;
@@ -134,46 +138,48 @@ h2 {
 }
 
 #mouse-scroll {
-  display: block;
-  position: absolute;
-  margin: auto;
-  left: 50%;
-  bottom: 30px;
-  transform: translateX(-50%);
-  z-index: 9999;
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    z-index: 9999;
 }
 
 #mouse-scroll span {
-  display: block;
-  width: 10px;
-  height: 10px;
-  transform: rotate(45deg);
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
-  margin: 0 0 5px 8px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    margin: 0 0 5px 8px;
 }
 
 #mouse-scroll .down-arrow-1 {
-  animation: mouse-scroll 2s ease-in-out infinite;
+    animation: mouse-scroll 2s ease-in-out infinite;
 }
 
 #mouse-scroll div {
-  width: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @keyframes mouse-scroll {
-  0% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0.5;
-  }
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
 }
 
 /* -------------------- SECTION MAP -------------------- */
@@ -185,10 +191,10 @@ h2 {
     align-items: center;
 }
 
-#map { 
+#map {
     width: 50%;
-    height: 80%; 
-filter: saturate(0.7);
+    height: 80%;
+    filter: saturate(0.7);
 }
 
 #map * {
@@ -208,15 +214,18 @@ filter: saturate(0.7);
     margin-top: 20px;
     color: var(--blanc);
 }
+
 #section-map h3 {
     margin-bottom: 10px;
     color: var(--blanc);
 }
+
 #map-legend a {
     color: var(--blanc);
     cursor: pointer;
-    text-transform:capitalize ;
+    text-transform: capitalize;
 }
+
 /* -------------------- FOOTER -------------------- */
 footer {
     background-color: var(--turquoise-pale);
@@ -225,13 +234,14 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color : var(--bleu-pale)
+    color: var(--bleu-pale)
 }
 
 footer a {
     color: white;
     padding: 0 10px;
 }
+
 /* -------------------- RESPONSIVE MOBILE -------------------- */
 @media (max-width: 768px) {
 
