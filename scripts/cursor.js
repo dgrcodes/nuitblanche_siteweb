@@ -25,7 +25,7 @@ document.querySelectorAll('a, button, [onclick]').forEach(function(el) {
 // Click
 const clickColors = [
   '#e5806c',
-  '#b1e8c9',
+  '#3c7b57',
   '#f4a261',
   '#2a9d8f',
   '#e9c46a',
