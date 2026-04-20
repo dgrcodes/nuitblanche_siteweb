@@ -14,8 +14,8 @@ const categorieColors = {
 const infoDefault = {
   titre: "Fêter la nuit",
   adresse: "Rouyn-Noranda",
-  heures: "19 h à 3 h",
-  description: "La Nuit blanche de Rouyn-Noranda revient pour une troisième édition et invite le public à plonger dans une expérience unique sous le thème <b>Fêter la nuit</b>. Alors que la nuit évoque habituellement le repos et la tranquillité, elle deviendra, le temps d'un soir, <b>un véritable terrain d'exploration artistique et créative</b>.\n\nS'inspirant de ce qui se fait dans de grandes métropoles du monde entier, la Nuit blanche est l'occasion idéale pour rassembler les communautés autour d'une célébration de la culture. <b>Le samedi 2 mai prochain, le quartier du Vieux-Noranda et du Centre-ville de Rouyn-Noranda</b> se transformeront en espaces vivants et vibrants, offrant une multitude d'activités culturelles et festives. Ce thème festif s'exprime sous diverses formes : <b>sonores, numériques, immersives, réflexives et bien plus encore</b>.",
+  heures: "20 h à 2 h",
+  description: "La Nuit blanche de Rouyn-Noranda revient pour une troisième édition et invite le public à plonger dans une expérience unique sous le thème <b>Fêter la nuit</b>. Alors que la nuit évoque habituellement le repos et la tranquillité, elle deviendra, le temps d'un soir, <b>un véritable terrain d'exploration artistique et créatif</b>.\n\nS'inspirant de ce qui se fait dans de grandes métropoles du monde entier, la Nuit blanche est l'occasion idéale pour rassembler les communautés autour d'une célébration de la culture. <b>Le samedi 2 mai prochain, le quartier du Vieux-Noranda et du Centre-ville de Rouyn-Noranda</b> se transformeront en espaces vivants et vibrants, offrant une multitude d'activités culturelles et festives. Ce thème festif s'exprime sous diverses formes : <b>sonores, numériques, immersives, réflexives et bien plus encore</b>.",
   bus: "<i>Cet évènement est réalisé en partenariat avec la Société du 100e dans le cadre des festivités du centenaire de la Ville de Rouyn-Noranda.</i>",
   cta: "Cliquer sur la carte pour avoir plus d'informations"
 };
