@@ -162,7 +162,7 @@
       "id": "studio-coppercrib",
       "nom": "Studio CopperCrib",
       "adresse": "10 Rue Perreault E",
-      "horaires": "18 h à 3 h",
+      "horaires": "21 h à 3 h",
       "lat": 48.238026654493304,
       "lng": -79.01979147365628,
       "categorie": "Performance",
@@ -172,7 +172,7 @@
           "details": "Collaboration - Finissants et finissantes au baccalauréat en création numérique"
         },
         {
-          "titre": "Performance de danse - Coppercrib",
+          "titre": "NOCT - Performance du Collectif CopperCrib",
           "horaire": "21 h à 21 h 15"
         },
         {
@@ -184,11 +184,11 @@
           "horaire": "22 h"
         },
         {
-          "titre": "Performance de danse - Coppercrib",
+          "titre": "Performance immersive du Collectif CopperCrib",
           "horaire": "23 h 30 à 23 h 45"
         },
         {
-          "titre": "DJ set - Passion Partagé",
+          "titre": "DJ set - Passion Partage",
           "horaire": "23 h 45 à 3 h"
         }
       ]
