@@ -50,7 +50,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(3, 5, 41, 0.166) !important;
+    background-color: rgba(3, 5, 41, 0) !important;
     font-size: 0.95em;
 }
 
@@ -114,7 +114,8 @@ video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-     filter: brightness(0.5); /* 0 = black, 1 = normal */
+    filter: brightness(0.6) sepia(0.9) hue-rotate(180deg) saturate(1.1);
+
 }
 
 #section-hero {
