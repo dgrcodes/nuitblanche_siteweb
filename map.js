@@ -32,6 +32,17 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
 }).addTo(map);
 
+fetch(`https://router.project-osrm.org/route/v1/foot/${-79.01605676016214},${48.247322960275966};${-79.01979147365628},${48.238026654493304}?overview=full&geometries=geojson`)
+  .then(r => r.json())
+  .then(data => {
+    const coords = data.routes[0].geometry.coordinates.map(c => [c[1], c[0]]);
+    L.polyline(coords, {
+      color: '#bbdee9',
+      weight: 3,
+      opacity: 0.8
+    }).addTo(map);
+  });
+
 function buildPopupContent(lieu) {
   var title = lieu.nom || 'Lieu';
   var categorie = lieu.categorie ? '<br>Categorie: ' + lieu.categorie : '';
@@ -147,31 +158,47 @@ function addLieuMarker(lieu) {
   if (typeof lieu.lat !== 'number' || typeof lieu.lng !== 'number') return;
 
   const color = getCategorieColor(lieu.categorie);
+  
+  const busStops = ['petit-theatre-du-vieux-noranda', 'studio-coppercrib'];
+  const isBusStop = busStops.includes(lieu.id);
+  
+  const size = isBusStop ? 36 : 26;
+  const anchor = size / 2;
+
+  const busIcon = isBusStop ? `
+    <i class="bi bi-bus-front-fill" style="
+      color: white;
+      font-size: 18px;
+      line-height: 1;
+    "></i>` : '';
 
   const icon = L.divIcon({
     className: '',
     html: `<div style="
-      width: 30px;
-      height: 30px;
+      width: ${size}px;
+      height: ${size}px;
       border-radius: 50%;
       background-color: ${color};
       border: 2px solid white;
       box-shadow: 0 0 4px rgba(0,0,0,0.4);
-    "></div>`,
-    iconSize: [30, 30],
-    iconAnchor: [15, 15]
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    ">${busIcon}</div>`,
+    iconSize: [size, size],
+    iconAnchor: [anchor, anchor]
   });
 
   const marker = L.marker([lieu.lat, lieu.lng], { icon })
     .addTo(map)
     .bindPopup(buildPopupContent(lieu));
 
-marker.lieuNom = lieu.nom;
+  marker.lieuNom = lieu.nom;
 
-marker.on('click', function () {
+  marker.on('click', function () {
     updateMapInfo(lieu);
     map.setView([lieu.lat, lieu.lng], 17);
-});
+  });
 }
 
 function updateMapInfo(lieu) {

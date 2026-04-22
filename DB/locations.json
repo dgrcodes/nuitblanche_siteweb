@@ -159,8 +159,8 @@
       "nom": "Studio CopperCrib",
       "adresse": "10 Rue Perreault E",
       "horaires": "21 h à 3 h",
-      "lat": 48.238026654493304,
-      "lng": -79.01979147365628,
+"lat": 48.23800,
+"lng": -79.01979,
       "categorie": "Performance",
       "activites": [
         {
@@ -194,8 +194,8 @@
       "nom": "Studio Adéquat",
       "adresse": "173 avenue Principale",
       "horaires": "21 h 30 à 22 h 30",
-      "lat": 48.23836,
-      "lng": -79.01991,
+"lat": 48.23850,
+"lng": -79.01991,
       "categorie": "Balado",
       "activites": [
         {
