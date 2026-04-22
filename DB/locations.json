@@ -224,8 +224,8 @@
       "nom": "Le Cabaret de la dernière chance",
       "adresse": "Rouyn-Noranda",
       "horaires": "19 h à 2 h",
-      "lat": null,
-      "lng": null,
+      "lat": 48.248047106380895,
+      "lng": -79.01750530458425,
       "categorie": "Projection",
       "activites": [
         {

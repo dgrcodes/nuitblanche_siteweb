@@ -9,6 +9,7 @@ const categorieColors = {
   'Performance':  '#e9c46a',
   'Balado':       '#457b9d',
   'Installation': '#a8dadc'
+  
 };
 
 const infoDefault = {
@@ -31,6 +32,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
   maxZoom: 19,
   attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
 }).addTo(map);
+
 
 fetch(`https://router.project-osrm.org/route/v1/foot/${-79.01605676016214},${48.247322960275966};${-79.01979147365628},${48.238026654493304}?overview=full&geometries=geojson`)
   .then(r => r.json())
@@ -191,7 +193,7 @@ function addLieuMarker(lieu) {
 
   const marker = L.marker([lieu.lat, lieu.lng], { icon })
     .addTo(map)
-    .bindPopup(buildPopupContent(lieu));
+
 
   marker.lieuNom = lieu.nom;
 
