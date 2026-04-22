@@ -215,19 +215,6 @@ h2 {
     align-items: center;
 }
 
-@keyframes mouse-scroll {
-    0% {
-        opacity: 0.5;
-    }
-
-    50% {
-        opacity: 0.9;
-    }
-
-    100% {
-        opacity: 0.5;
-    }
-}
 
 /* -------------------- SECTION MAP -------------------- */
 
