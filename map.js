@@ -9,6 +9,7 @@ const categorieColors = {
   'Performance':  '#e9c46a',
   'Balado':       '#457b9d',
   'Installation': '#a8dadc'
+  
 };
 
 const infoDefault = {
@@ -32,11 +33,6 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
 }).addTo(map);
 
-function buildPopupContent(lieu) {
-  var title = lieu.nom || 'Lieu';
-  var categorie = lieu.categorie ? '<br>Categorie: ' + lieu.categorie : '';
-  return '<strong>' + title + '</strong>' + categorie;
-}
 
 function buildLegendItem(lieu) {
   var li = document.createElement('li');
@@ -164,7 +160,7 @@ function addLieuMarker(lieu) {
 
   const marker = L.marker([lieu.lat, lieu.lng], { icon })
     .addTo(map)
-    .bindPopup(buildPopupContent(lieu));
+
 
 marker.lieuNom = lieu.nom;
 
