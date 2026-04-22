@@ -52,7 +52,7 @@
         {
           "titre": "Performance Contraintes Sévères",
           "horaire": "À minuit",
-          "details": "Artiste : Simon Turcotte-Bégin"
+          "details": "Performance musicale doom, sludge, noise, ambiant. Artiste : Simon Turcotte-Bégin"
         }
       ]
     },
@@ -117,10 +117,6 @@
         {
           "titre": "Terrain de jeux nocturnes",
           "details": "Quand la ville s'endort, Le Pixel s'allume !"
-        },
-        {
-          "titre": "Jeu vidéo Frayures",
-          "details": "Finissants et finissantes à la maîtrise en création numérique"
         }
       ]
     },
@@ -172,7 +168,7 @@
           "details": "Collaboration - Finissants et finissantes au baccalauréat en création numérique"
         },
         {
-          "titre": "NOCT - Performance du Collectif CopperCrib",
+          "titre": "NOCT - Performance immersive du Collectif CopperCrib",
           "horaire": "21 h à 21 h 15"
         },
         {
@@ -204,7 +200,7 @@
       "activites": [
         {
           "titre": "Enregistrement d'un balado devant public",
-          "details": "Spécial 100e anniversaire de Rouyn-Noranda"
+          "details": "Spécial 100e anniversaire de Rouyn-Noranda avec Isabelle Rivest et Alexandre Castonguay"
         }
       ]
     },
@@ -220,6 +216,40 @@
         {
           "titre": "Installation surprise dans le Vieux-Noranda",
           "details": "Collaboration - Finissants et finissantes au baccalauréat en création numérique"
+        }
+      ]
+    },
+    {
+      "id": "cabaret-derniere-chance",
+      "nom": "Le Cabaret de la dernière chance",
+      "adresse": "Rouyn-Noranda",
+      "horaires": "19 h à 2 h",
+      "lat": null,
+      "lng": null,
+      "categorie": "Projection",
+      "activites": [
+        {
+          "titre": "Projection documentaire sur la grève des fros",
+          "details": "Finissants et finissantes à la maîtrise en création numérique"
+        },
+        {
+          "titre": "Jeu vidéo Frayures",
+          "details": "Finissants et finissantes à la maîtrise en création numérique"
+        }
+      ]
+    },
+    {
+      "id": "navette-autobus",
+      "nom": "Navette Autobus",
+      "adresse": "Départ : Agora des Arts, 170 avenue Murdoch",
+      "horaires": "20 h à 3 h (aux 20 minutes)",
+      "lat": null,
+      "lng": null,
+      "categorie": "Diffusion",
+      "activites": [
+        {
+          "titre": "Trajet navette",
+          "details": "Agora des Arts (170 avenue Murdoch) <-> Studio CopperCrib (4 rue Perreault Est). Merci à la Ville de Rouyn-Noranda."
         }
       ]
     }
