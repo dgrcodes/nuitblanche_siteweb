@@ -9,8 +9,10 @@
   <link rel="icon" type="image/x-icon" href="./assets/medias/favicon.ico">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -25,7 +27,7 @@
 
 <body>
   <div id="cursor"></div>
-<div id="cursor-follower"></div>
+  <div id="cursor-follower"></div>
 
   <header>
     <nav class="navbar navbar-expand-md bg-transparent w-100">
@@ -45,7 +47,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#section-map">MAP INTERACTIVE</a>
             </li>
-                        <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" href="#reseaux-sociaux">RÉSEAUX SOCIAUX</a>
             </li>
           </ul>
@@ -69,13 +71,14 @@
       </div>
     </nav>
     <section id="section-hero">
- 
+
       <!-- Mettre une vidéo en background -->
       <video loop autoplay muted playsinline src="./assets/medias/VideoWeb.mp4"></video>
       <div class="hero-texte">
         <div class="hero-texte-flex" />
         <h1>
-          <p class="typewrite" data-period="2000" data-type='[ "02 mai 2026", "Nuit Blanche", "Rouyn-Noranda", "Fêter la nuit"]'></p>
+          <p class="typewrite" data-period="2000"
+            data-type='[ "02 mai 2026", "Nuit Blanche", "Rouyn-Noranda", "Fêter la nuit"]'></p>
           <span class="wrap"></span>
           </a>
         </h1>
@@ -93,23 +96,31 @@
       </a>
     </section>
   </header>
-<section id="section-apropos">
+  <section id="section-apropos">
     <div class="apropos-01">
-        <h3>NUIT BLANCHE</h3>
-        <h4>19h à 2h</h4>
-        <p>La Nuit blanche de Rouyn-Noranda revient pour une troisième édition et invite le public à plonger dans une expérience unique sous le thème <b>Fêter la nuit</b>. Alors que la nuit évoque habituellement le repos et la tranquillité, elle deviendra, le temps d'un soir, <b>un véritable terrain d'exploration artistique et créatif</b>.</p>
-         <p>S'inspirant de ce qui se fait dans de grandes métropoles du monde entier, la Nuit blanche est l'occasion idéale pour rassembler les communautés autour d'une célébration de la culture. <b>Le samedi 2 mai prochain, le quartier du Vieux-Noranda et du Centre-ville de Rouyn-Noranda</b> se transformeront en espaces vivants et vibrants, offrant une multitude d'activités culturelles et festives. Ce thème festif s'exprime sous diverses formes : <b>sonores, numériques, immersives, réflexives et bien plus encore</b>.</p>
-        <i>Cet évènement est réalisé en partenariat avec la Société du 100e dans le cadre des festivités du centenaire de la Ville de Rouyn-Noranda.</i>
-        <a href="">Voir la programmation complète</a>
+      <h3>NUIT BLANCHE</h3>
+      <h4>19h à 2h</h4>
+      <p>La Nuit blanche de Rouyn-Noranda revient pour une troisième édition et invite le public à plonger dans une
+        expérience unique sous le thème <b>Fêter la nuit</b>. Alors que la nuit évoque habituellement le repos et la
+        tranquillité, elle deviendra, le temps d'un soir, <b>un véritable terrain d'exploration artistique et
+          créatif</b>.</p>
+      <p>S'inspirant de ce qui se fait dans de grandes métropoles du monde entier, la Nuit blanche est l'occasion idéale
+        pour rassembler les communautés autour d'une célébration de la culture. <b>Le samedi 2 mai prochain, le quartier
+          du Vieux-Noranda et du Centre-ville de Rouyn-Noranda</b> se transformeront en espaces vivants et vibrants,
+        offrant une multitude d'activités culturelles et festives. Ce thème festif s'exprime sous diverses formes :
+        <b>sonores, numériques, immersives, réflexives et bien plus encore</b>.</p>
+      <i>Cet évènement est réalisé en partenariat avec la Société du 100e dans le cadre des festivités du centenaire de
+        la Ville de Rouyn-Noranda.</i>
+      <a href="#section-map">Voir la programmation complète</a>
     </div>
     <div class="apropos-03">
     </div>
-</section>
+  </section>
   <section id="section-map">
     <div id="map-legende">
       <h3>LÉGENDE</h3>
       <ul id="map-legend">
-  <li><a class="reset-link" onclick="resetMarkerOpacity()" style="
+        <li><a class="reset-link" onclick="resetMarkerOpacity()" style="
   border: 1.5px solid var(--blanc);
   color: var(--bleu-fonce);
   background-color: rgba(255, 255, 255, 0.5);
@@ -119,41 +130,43 @@
   cursor: pointer;
   transition: background-color 0.2s;
 ">Tous les lieux</a></li>
-</ul>
+      </ul>
     </div>
     <div class="bottom-row">
-    <div id="map"></div>
-<div id="map-info">
-  <h3></h3>
-  <div class="map-info-meta">
-    <span class="adresse"></span>
-    <span class="horaires"></span>
-  </div>
-  <div id="activites-nav"></div>
-</div>
+      <div id="map"></div>
+      <div id="map-info">
+        <h3></h3>
+        <div class="map-info-meta">
+          <span class="adresse"></span>
+          <span class="horaires"></span>
+        </div>
+        <div id="activites-nav"></div>
+      </div>
     </div>
 
 
   </section>
-<section id="reseaux-sociaux">
-<div id="réseaux-info">
-  <h4>Ne manquez rien de la programmation</h4>
-  <p>Plusieurs informations seront partagées le soir même sur nos réseaux.</p>
-  <div id="reseaux-boutons">
-    <a href="https://www.instagram.com/nuitblancherouynnoranda/" target="_blank" class="reseaux-btn instagram">Instagram</a>
-    <a href="https://www.facebook.com/profile.php?id=61575331765984" target="_blank" class="reseaux-btn facebook">Facebook</a>
-    <a href="https://www.tiktok.com/@nuitblanche.rn" target="_blank" class="reseaux-btn tiktok">TikTok</a>
-  </div>
-</div>
-  <div id="reseaux-insta">
-    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DXShSPwjjXf/"
-    data-instgrm-version="14" style="max-width:100%; margin:0;">
-      <a href="https://www.instagram.com/p/DXShSPwjjXf/" target="_blank" rel="noopener">
-        Voir sur instagram
-      </a>
-    </blockquote>
-  </div>
-</section>
+  <section id="reseaux-sociaux">
+    <div id="réseaux-info">
+      <h4>Ne manquez rien de la programmation</h4>
+      <p>Plusieurs informations seront partagées le soir même sur nos réseaux.</p>
+      <div id="reseaux-boutons">
+        <a href="https://www.instagram.com/nuitblancherouynnoranda/" target="_blank"
+          class="reseaux-btn instagram">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61575331765984" target="_blank"
+          class="reseaux-btn facebook">Facebook</a>
+        <a href="https://www.tiktok.com/@nuitblanche.rn" target="_blank" class="reseaux-btn tiktok">TikTok</a>
+      </div>
+    </div>
+    <div id="reseaux-insta">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DXShSPwjjXf/"
+        data-instgrm-version="14" style="max-width:100%; margin:0;">
+        <a href="https://www.instagram.com/p/DXShSPwjjXf/" target="_blank" rel="noopener">
+          Voir sur instagram
+        </a>
+      </blockquote>
+    </div>
+  </section>
 
   <script async src="https://www.instagram.com/embed.js"></script>
   <footer>
@@ -174,7 +187,7 @@
     crossorigin="anonymous"></script>
   <script src="script.js"></script>
   <script src="map.js"></script>
-<script src="./scripts/cursor.js"></script>
+  <script src="./scripts/cursor.js"></script>
 
 </body>
 

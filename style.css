@@ -12,10 +12,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
-b {
-    color: var(--bleu-fonce);
-}
-
 
 
 html, body {
@@ -59,7 +55,7 @@ a.nav-link {
     color: var(--blanc) !important;
     transition: opacity 0.3s ease;
     opacity: 1;
-
+    
 }
 
 .fa-bars {
@@ -116,7 +112,7 @@ video {
     height: 100%;
     object-fit: cover;
     filter: brightness(0.6) sepia(0.9) hue-rotate(180deg) saturate(1.1);
-
+    
 }
 
 #section-hero {
@@ -215,7 +211,6 @@ h2 {
     align-items: center;
 }
 /* -------------------- SECTION A PROPOS -------------------- */
-/* -------------------- SECTION A PROPOS -------------------- */
 #section-apropos {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -228,7 +223,7 @@ h2 {
     position: relative;
     overflow: hidden;
     padding: 0 50px;
-
+    
 }
 
 .apropos-01,
@@ -240,6 +235,11 @@ h2 {
     z-index: 2;
 }
 
+.apropos-01 b {
+    color: var(--bleu-fonce);
+}
+
+/* -------------------- SECTION A PROPOS -------------------- */
 .apropos-02 {
     position: relative;
     display: flex;
