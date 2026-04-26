@@ -30,7 +30,7 @@
   <div id="cursor-follower"></div>
 
   <header>
-    <nav class="navbar navbar-expand-md bg-transparent w-100">
+    <nav class="navbar navbar-expand-lg bg-transparent w-100">
       <div class="container">
         <a class="navbar-brand" href="#section-hero">Nuit Blanche</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -49,6 +49,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#reseaux-sociaux">RÉSEAUX SOCIAUX</a>
+            </li>
+                        <li class="nav-item">
+              <a class="nav-link" href="programmation.html">PROGRAMMATION COMPLÈTE</a>
             </li>
           </ul>
 
@@ -100,41 +103,56 @@
     <div class="apropos-01">
       <h3>NUIT BLANCHE</h3>
       <h4>19h à 2h</h4>
-      <p>La Nuit blanche de Rouyn-Noranda revient pour une troisième édition et invite le public à plonger dans une
-        expérience unique sous le thème <b>Fêter la nuit</b>. Alors que la nuit évoque habituellement le repos et la
-        tranquillité, elle deviendra, le temps d'un soir, <b>un véritable terrain d'exploration artistique et
-          créatif</b>.</p>
-      <p>S'inspirant de ce qui se fait dans de grandes métropoles du monde entier, la Nuit blanche est l'occasion idéale
-        pour rassembler les communautés autour d'une célébration de la culture. <b>Le samedi 2 mai prochain, le quartier
-          du Vieux-Noranda et du Centre-ville de Rouyn-Noranda</b> se transformeront en espaces vivants et vibrants,
-        offrant une multitude d'activités culturelles et festives. Ce thème festif s'exprime sous diverses formes :
-        <b>sonores, numériques, immersives, réflexives et bien plus encore</b>.</p>
+<p>La Nuit blanche de Rouyn-Noranda revient pour une troisième édition et invite le public à plonger dans une
+  expérience unique sous le thème <b>Fêter la nuit</b>. Alors que la nuit évoque habituellement le repos et la
+  tranquillité, elle deviendra, le temps d'un soir, <b>un véritable terrain d'exploration artistique et
+  créative</b>.</p>
+<p>S'inspirant de ce qui se fait dans de grandes métropoles du monde entier, la Nuit blanche est l'occasion idéale
+  pour rassembler les communautés autour d'une célébration de la culture. <b>Le samedi 2 mai prochain, le quartier
+  du Vieux-Noranda et du Centre-ville de Rouyn-Noranda</b> se transformeront en espaces vivants et vibrants,
+  offrant une multitude d'activités culturelles et festives. Ce thème festif s'exprime sous diverses formes :
+  <b>sonores, numériques, immersives, réflexives et bien plus encore</b>.</p>
       <i>Cet évènement est réalisé en partenariat avec la Société du 100e dans le cadre des festivités du centenaire de
         la Ville de Rouyn-Noranda.</i>
-      <a href="#section-map">Voir la programmation complète</a>
+      <a href="programmation.html">Voir la programmation complète</a>
     </div>
-    <div class="apropos-03">
+    <div class="apropos-02">
     </div>
   </section>
-  <section id="section-map">
-    <div id="map-legende">
-      <h3>LÉGENDE</h3>
-      <ul id="map-legend">
-        <li><a class="reset-link" onclick="resetMarkerOpacity()" style="
-  border: 1.5px solid var(--blanc);
-  color: var(--bleu-fonce);
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
-  padding: 3px 12px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
-">Tous les lieux</a></li>
-      </ul>
-    </div>
+<section id="section-map">
     <div class="bottom-row">
+<div id="map-banner">
+  <div class="banner-track">
+    <span class="banner-content">
+      <strong>NAVETTE GRATUITE</strong> - Autobus aux 20 minutes, de 20h à 3h
+      <i class="bi bi-bus-front-fill banner-sep"></i>
+      Arrêt 1 : Agora des Arts (170, avenue Murdoch)
+      <i class="bi bi-bus-front-fill banner-sep"></i>
+      Arrêt 2 : Studio CopperCrib (4, rue Perreault Est, en face du Mikes)
+      <i class="bi bi-bus-front-fill banner-sep"></i>
+      Merci à la Ville de Rouyn-Noranda
+      <i class="bi bi-bus-front-fill banner-sep"></i>
+    </span>
+    <span class="banner-content" aria-hidden="true">
+      <strong>NAVETTE GRATUITE</strong> - Autobus aux 20 minutes, de 20h à 3h
+      <i class="bi bi-bus-front-fill banner-sep"></i>
+      Arrêt 1 : Agora des Arts (170, avenue Murdoch)
+      <i class="bi bi-bus-front-fill banner-sep"></i>
+      Arrêt 2 : Studio CopperCrib (4, rue Perreault Est, en face du Mikes)
+      <i class="bi bi-bus-front-fill banner-sep"></i>
+      Merci à la Ville de Rouyn-Noranda
+      <i class="bi bi-bus-front-fill banner-sep"></i>
+    </span>
+  </div>
+</div>
       <div id="map"></div>
+      <div id="map-legende">
+        <h3>LÉGENDE</h3>
+        <ul id="map-legend"></ul>
+      </div>
+      
       <div id="map-info">
+        <button id="map-info-close" aria-label="Fermer">×</button>
         <h3></h3>
         <div class="map-info-meta">
           <span class="adresse"></span>
@@ -143,9 +161,7 @@
         <div id="activites-nav"></div>
       </div>
     </div>
-
-
-  </section>
+</section>
   <section id="reseaux-sociaux">
     <div id="réseaux-info">
       <h4>Ne manquez rien de la programmation</h4>
