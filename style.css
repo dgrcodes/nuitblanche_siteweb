@@ -742,6 +742,11 @@ footer a {
     overflow: hidden;
 }
 
+#section-prog strong {
+    color: var(--blanc);
+    font-size: 1.2em;
+}
+
 .prog-header {
     max-width: 1100px;
     margin: 0 auto 100px;
@@ -777,8 +782,17 @@ footer a {
     opacity: 0.8;
 }
 
+.prog-meta {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+}
+
 .prog-meta-item {
-    padding-right: 15px;
+    color: var(--blanc);
+    opacity: 0.7;
+    font-size: 0.85rem;
 }
 
 #section-prog a {
@@ -793,7 +807,7 @@ footer a {
     position: relative;
     max-width: 1100px;
     margin: 0 auto;
-    padding-left: 100px;
+    padding-left: 140px;
     z-index: 1;
 }
 
@@ -801,15 +815,23 @@ footer a {
     content: '';
     position: absolute;
     top: 12px;
-    left: 60px;
+    left: 80px;
     width: 1px;
     height: calc(100% - 24px);
-    background-color: rgba(187, 222, 233, 0.2);
+    background-color: rgba(187, 222, 233, 0.15);
 }
+
+
+/* -------------------- BLOC HORAIRE -------------------- */
 
 .time-block {
     position: relative;
-    margin-bottom: 80px;
+    margin-bottom: 140px;
+    padding-top: 20px;
+}
+
+.time-block:first-child {
+    padding-top: 0;
 }
 
 .js-enabled .time-block {
@@ -825,63 +847,54 @@ footer a {
 
 .time-marker {
     position: absolute;
-    left: -100px;
+    left: -140px;
     top: 0;
-    width: 80px;
+    width: 120px;
     z-index: 2;
 }
 
 .time-marker::before {
     content: '';
     position: absolute;
-    left: 56px;
-    top: 14px;
-    width: 9px;
-    height: 9px;
+    left: 76px;
+    top: 18px;
+    width: 11px;
+    height: 11px;
     border-radius: 50%;
     background-color: var(--bleu-pale);
+    box-shadow: 0 0 0 4px var(--bleu-fonce);
     transition: transform 0.3s ease;
 }
 
 .time-block:hover .time-marker::before {
-    transform: scale(1.5);
+    transform: scale(1.4);
 }
 
-.time-label {
+.lieux-list .lieu-card + .lieu-card {
+    border-top: 1px solid rgba(187, 222, 233, 0.15);
+    padding-top: 32px;
+}
+
+.time-hour {
     position: absolute;
-    left: 0;
-    top: 8px;
-    font-size: 1rem;
-    font-weight: 600;
+    left: -20px;
+    top: 5px;
+    font-size: 2rem;
+    font-weight: 800;
     color: var(--bleu-pale);
-    letter-spacing: 0.05em;
+    letter-spacing: -0.03em;
     font-variant-numeric: tabular-nums;
+    line-height: 1;
 }
 
-.time-content {
+.lieux-list {
     display: flex;
     flex-direction: column;
-    gap: 48px;
-}
-
-.lieu-card + .lieu-card {
-    margin-top: 48px;
-    padding-top: 48px;
-    position: relative;
-}
-
-.lieu-card + .lieu-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 1px;
-    background-color: rgba(187, 222, 233, 0.4);
+    gap: 24px;
 }
 
 
-/* -------------------- CARTE LIEU -------------------- */
+/* -------------------- CARTE ACTIVITÉ -------------------- */
 
 .lieu-card {
     background-color: transparent;
@@ -891,120 +904,87 @@ footer a {
     transition: transform 0.3s ease;
 }
 
-.lieu-header {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 28px;
-}
-
-.lieu-header h2 {
-    font-size: clamp(1.4rem, 2.2vw, 1.9rem);
-    color: var(--bleu-pale);
-    margin: 0;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    background: none !important;
-    border: none;
-    padding: 0;
-}
-
-.lieu-horaire {
+.lieu-badge {
     display: inline-block;
-    width: fit-content;
-    color: var(--bleu-pale);
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    margin-top: 4px;
-}
-
-.lieu-adresse {
-    color: var(--blanc);
-    font-size: 0.85rem;
-    opacity: 0.5;
-    font-weight: 400;
-}
-
-
-/* -------------------- ACTIVITÉS -------------------- */
-
-.activites {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.activites li {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    align-items: flex-start;
-}
-
-.activites .heure {
-    flex-shrink: 0;
-    color: var(--bleu-pale);
+    background-color: var(--accent);
+    color: var(--bleu-fonce);
     font-size: 0.7rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    margin-top: 4px;
-    min-width: 90px;
-    font-variant-numeric: tabular-nums;
+    padding: 5px 12px;
+    border-radius: 25px;
+    margin-bottom: 14px;
+    width: fit-content;
 }
 
-.activites li > div {
-    flex: 1;
-}
-
-.activites h3 {
-    font-size: 1.05rem;
-    color: var(--blanc);
-    margin: 0 0 6px 0;
-    font-weight: 500;
-    line-height: 1.4;
-    letter-spacing: -0.01em;
-}
-
-.activites h3 em {
+.lieu-card h2.activite-titre {
+    font-size: clamp(1.3rem, 2vw, 1.7rem);
     color: var(--bleu-pale);
-    font-style: italic;
-    font-weight: 400;
+    margin: 0 0 6px 0;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    background: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
 }
 
-.activites p {
-    font-size: 0.9rem;
+.lieu-card .lieu-adresse {
     color: var(--blanc);
-    opacity: 0.6;
-    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.lieu-card .lieu-adresse i {
+    margin-right: 4px;
+}
+
+.activite-end {
+    color: var(--blanc);
+    opacity: 0.85;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 14px 0;
+}
+
+.activite-end strong {
+    color: var(--bleu-pale);
+    font-weight: 800;
+}
+
+.activite-desc {
+    font-size: 0.95rem;
+    color: var(--blanc);
+    opacity: 0.65;
+    margin: 0 0 12px 0;
     line-height: 1.5;
 }
 
-
-/* -------------------- BOUTON INSCRIPTION -------------------- */
-
-.btn-inscription {
+.activite-link {
     display: inline-block;
-    margin-top: 12px;
+    margin-top: 14px;
     color: var(--bleu-pale);
     font-size: 0.8rem;
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    padding: 10px 22px;
+    padding: 8px 18px;
     border: 1.5px solid var(--bleu-pale);
     border-radius: 25px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn-inscription:hover {
+.activite-link:hover {
     background-color: var(--bleu-pale);
     color: var(--bleu-fonce);
     opacity: 1 !important;
@@ -1098,7 +1078,7 @@ footer a {
         width: 50%;
     }
 
-  #map-info {
+    #map-info {
         top: 40%;
         right: 0;
         left: 0;
@@ -1149,20 +1129,28 @@ footer a {
     }
 
     .timeline {
-        padding-left: 90px;
+        padding-left: 110px;
     }
 
     .timeline::before {
-        left: 50px;
+        left: 60px;
     }
 
     .time-marker {
-        left: -90px;
-        width: 70px;
+        left: -110px;
+        width: 100px;
     }
 
     .time-marker::before {
-        left: 46px;
+        left: 56px;
+    }
+
+    .time-hour {
+        font-size: 1.7rem;
+    }
+
+    .time-block {
+        margin-bottom: 100px;
     }
 }
 
@@ -1243,6 +1231,7 @@ footer a {
 
     #section-map {
         height: 80vh;
+        padding-top: 64px;
     }
 
     .banner-content {
@@ -1370,7 +1359,14 @@ footer a {
     }
 
     .time-block {
-        margin-bottom: 56px;
+        margin-bottom: 80px;
+        padding-top: 0;
+        padding-bottom: 24px;
+        border-bottom: 1px solid rgba(187, 222, 233, 0.15);
+    }
+
+    .time-block:last-child {
+        border-bottom: none;
     }
 
     .time-marker {
@@ -1378,44 +1374,22 @@ footer a {
         left: 0;
         top: 0;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 32px;
     }
 
     .time-marker::before {
         display: none;
     }
 
-    .time-label {
+    .time-hour {
         position: relative;
         left: 0;
         top: 0;
-        font-size: 1.1rem;
+        font-size: 2.2rem;
     }
 
-    .time-content {
-        gap: 16px;
-    }
-
-    .lieu-header {
-        margin-bottom: 22px;
-    }
-
-    .activites li {
-        flex-direction: column;
-        gap: 6px;
-    }
-
-    .activites .heure {
-        min-width: auto;
-        margin-top: 0;
-    }
-
-    .activites h3 {
-        font-size: 1rem;
-    }
-
-    .activites p {
-        font-size: 0.85rem;
+    .lieux-list {
+        gap: 32px;
     }
 }
 
@@ -1454,7 +1428,7 @@ footer a {
         letter-spacing: 0.15em;
     }
 
-    .lieu-header h2 {
+    .lieu-card h2.activite-titre {
         font-size: 1.2rem;
     }
 }
