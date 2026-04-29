@@ -59,9 +59,19 @@ body {
 
 /* Programmation page: add subtle solid background for readability */
 .prog-navbar {
-    background-color: rgba(3, 5, 41, 0.75) !important;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    --navbar-height: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--navbar-height);
+    display: flex;
+    align-items: center;
+    background-color: rgba(3, 5, 41, 0.85) !important;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 1100;
 }
 
 .prog-navbar .navbar-brand,
@@ -79,10 +89,15 @@ body {
 
 @media (max-width: 991px) {
     .prog-navbar .navbar-collapse {
-        background-color: rgba(3,5,41,0.92);
+        background-color: rgba(3,5,41,0.9);
         padding: 12px;
     }
     .prog-navbar .nav-link { color: var(--blanc) !important; }
+}
+
+/* Push programmation content down so fixed navbar doesn't cover it. */
+.prog-page #section-prog {
+    padding-top: calc(var(--navbar-height, 64px) + env(safe-area-inset-top));
 }
 
 .active {
