@@ -19,6 +19,10 @@ html, body {
     font-family: "Gabarito", sans-serif;
 }
 
+body {
+        background-color: var(--turquoise-pale);
+}
+
 section {
     width: 100%;
 }
