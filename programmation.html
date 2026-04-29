@@ -77,12 +77,23 @@
 
 <section id="section-prog">
   <header class="prog-header">
-    <h1 class="prog-title">Programmation</h1>
+    <h1 class="prog-title" style="text-wrap: nowrap;">Programmation</h1>
     <p class="prog-subtitle">Samedi 2 mai · Vieux-Noranda &amp; Centre-ville</p>
     <div class="prog-meta">
       <span class="prog-meta-item"><i class="bi bi-clock"></i> Une programmation de 17h30 à 3h</span>
       <span class="prog-meta-item"><i class="bi bi-geo-alt"></i> 11 lieux</span>
       <span class="prog-meta-item"><i class="bi bi-stars"></i> 30+ activités</span>
+    </div>
+    <div class="prog-search">
+      <label for="prog-search-input" class="visually-hidden">Rechercher</label>
+      <div class="input-group mt-3">
+        <input id="prog-search-input" type="search" class="form-control" placeholder="Rechercher activité, lieu, description..." aria-label="Rechercher">
+        <button id="prog-search-clear" class="btn btn-outline-secondary" type="button">Effacer</button>
+      </div>
+      <div class="d-flex justify-content-between mt-2">
+        <small id="prog-search-count" class="text-muted">Affiche tout</small>
+        <small id="prog-search-noresults" class="text-danger" style="display:none">Aucun résultat</small>
+      </div>
     </div>
   </header>
 
@@ -234,13 +245,6 @@
           <p class="activite-desc">Exposition permanente · Réserve ouverte : plus de 2 400 œuvres à découvrir.</p>
         </div>
 
-        <div class="lieu-card" style="--accent: #e5806c;">
-          <span class="lieu-badge">Cabaret de la dernière chance</span>
-          <h2 class="activite-titre">Documentaire sur la grève des fros</h2>
-          <p class="lieu-adresse"><i class="bi bi-geo-alt-fill"></i> 146, 8e rue</p>
-          <p class="activite-end">Jusqu'à <strong>2h</strong></p>
-          <p class="activite-desc">Projection · Finissant·e·s à la maîtrise en création numérique.</p>
-        </div>
 
         <div class="lieu-card" style="--accent: #e5806c;">
           <span class="lieu-badge">Cabaret de la dernière chance</span>
@@ -300,6 +304,14 @@
           <p class="activite-desc">Jeu interactif. Fermeture des portes à 22h.</p>
         </div>
 
+          <div class="lieu-card" style="--accent: #e5806c;">
+            <span class="lieu-badge">Cabaret de la dernière chance</span>
+            <h2 class="activite-titre">Documentaire sur la grève des fros — Projection (21h)</h2>
+            <p class="lieu-adresse"><i class="bi bi-geo-alt-fill"></i> 146, 8e rue</p>
+            <p class="activite-end">Jusqu'à <strong>22h</strong></p>
+            <p class="activite-desc">Projection · Finissant·e·s à la maîtrise en création numérique.</p>
+          </div>
+
       </div>
     </article>
 
@@ -330,7 +342,7 @@
 
     <article class="time-block" data-time="22h">
       <div class="time-marker">
-        <span class="time-hour">22h</span>
+        <span class="time-hour">22h00</span>
       </div>
       <div class="lieux-list">
 
@@ -340,6 +352,31 @@
           <p class="lieu-adresse"><i class="bi bi-geo-alt-fill"></i> 201, avenue Dallaire</p>
           <p class="activite-end">Jusqu'à <strong>minuit</strong></p>
           <p class="activite-desc">Évènement littéraire et loufoque.</p>
+        </div>
+
+        <div class="lieu-card" style="--accent: #e5806c;">
+          <span class="lieu-badge">Cabaret de la dernière chance</span>
+          <h2 class="activite-titre">Documentaire sur la grève des fros — Projection (22h)</h2>
+          <p class="lieu-adresse"><i class="bi bi-geo-alt-fill"></i> 146, 8e rue</p>
+          <p class="activite-end">Jusqu'à <strong>23h</strong></p>
+          <p class="activite-desc">Projection · Finissant·e·s à la maîtrise en création numérique.</p>
+        </div>
+
+      </div>
+    </article>
+
+    <article class="time-block" data-time="23h">
+      <div class="time-marker">
+        <span class="time-hour">23h00</span>
+      </div>
+      <div class="lieux-list">
+
+        <div class="lieu-card" style="--accent: #e5806c;">
+          <span class="lieu-badge">Cabaret de la dernière chance</span>
+          <h2 class="activite-titre">Documentaire sur la grève des fros — Projection (23h)</h2>
+          <p class="lieu-adresse"><i class="bi bi-geo-alt-fill"></i> 146, 8e rue</p>
+          <p class="activite-end">Jusqu'à <strong>minuit</strong></p>
+          <p class="activite-desc">Projection · Finissant·e·s à la maîtrise en création numérique.</p>
         </div>
 
       </div>
@@ -393,7 +430,7 @@
 
   <footer>
 
-    <div>
+    <div class="footer-content">
       © 2026 Nuit Blanche Rouyn-Noranda. Tous droits réservés.
     </div>
 
@@ -407,6 +444,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <script src="./scripts/search.js"></script>
   <script src="script.js"></script>
   <script src="map.js"></script>
   <script src="./scripts/cursor.js"></script>

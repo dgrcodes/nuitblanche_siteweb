@@ -1435,4 +1435,8 @@ footer a {
     .lieu-card h2.activite-titre {
         font-size: 1.2rem;
     }
+    .footer-content {
+        justify-content: center;
+        text-align: center;
+    }
 }
