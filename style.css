@@ -57,6 +57,34 @@ body {
     font-size: 0.95em;
 }
 
+/* Programmation page: add subtle solid background for readability */
+.prog-navbar {
+    background-color: rgba(3, 5, 41, 0.75) !important;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.prog-navbar .navbar-brand,
+.prog-navbar a.nav-link,
+.prog-navbar .fa-bars,
+.prog-navbar .bi {
+    color: var(--blanc) !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+.prog-navbar .navbar-toggler {
+    background: rgba(255,255,255,0.06);
+    border-radius: 6px;
+}
+
+@media (max-width: 991px) {
+    .prog-navbar .navbar-collapse {
+        background-color: rgba(3,5,41,0.92);
+        padding: 12px;
+    }
+    .prog-navbar .nav-link { color: var(--blanc) !important; }
+}
+
 .active {
     color: var(--turquoise-pale) !important;
 }
@@ -208,10 +236,10 @@ h2 {
     border-bottom: 3px solid #fff;
     margin: 0 0 5px 8px;
 }
-
+/* 
 #mouse-scroll .down-arrow-1 {
     animation: mouse-scroll 2s ease-in-out infinite;
-}
+} */
 
 #mouse-scroll div {
     width: 30px;
