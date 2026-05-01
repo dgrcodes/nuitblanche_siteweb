@@ -70,8 +70,9 @@
           "details": "100 ans de cinéma à Rouyn-Noranda"
         },
         {
-          "titre": "Installation sonore immersive",
-          "details": "Finissants et finissantes au baccalauréat en création numérique"
+          "titre": "Nos Contours",
+          "details": "Expérience immersive sonore · Finissants et finissantes au baccalauréat en création numérique",
+          "creneaux": "19h • 19h15 • 19h30 • 19h50 • 20h05 — 23h • 23h20 • 23h40"
         }
       ]
     },
@@ -215,7 +216,7 @@
       "activites": [
         {
           "titre": "Respirer la nuit",
-          "details": "Installation surprise - Finissants et finissantes au baccalauréat en création numérique"
+          "details": "Installation sonore immersive annoncée le soir même via les médias sociaux · Collaboration avec les finissant·e·s au baccalauréat en création numérique"
         }
       ]
     },
