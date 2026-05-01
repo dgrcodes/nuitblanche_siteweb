@@ -164,6 +164,9 @@ function addLieuMarker(lieu) {
   const busStops = ['agora-des-arts', 'studio-coppercrib'];
   const isBusStop = busStops.includes(lieu.id);
   
+  const secret = ['productions-chien-pas-de-medaille'];
+  const isSecret = secret.includes(lieu.id);
+  
   const size = isBusStop ? 36 : 26;
   const anchor = size / 2;
 
@@ -174,9 +177,29 @@ function addLieuMarker(lieu) {
       line-height: 1;
     "></i>` : '';
 
+  const secretZone = isSecret ? `
+    <div style="
+      position: absolute;
+      width: ${size * 5}px;
+      height: ${size * 5}px;
+      border-radius: 50%;
+      background-color: ${color};
+      opacity: 0.25;
+      z-index: 0;
+    "></div>` : '';
+
   const icon = L.divIcon({
     className: '',
     html: `<div style="
+      position: relative;
+      width: ${size * 2.6}px;
+      height: ${size * 2.6}px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    ">${secretZone}<div style="
+      position: relative;
+      z-index: 1;
       width: ${size}px;
       height: ${size}px;
       border-radius: 50%;
@@ -186,9 +209,9 @@ function addLieuMarker(lieu) {
       display: flex;
       align-items: center;
       justify-content: center;
-    ">${busIcon}</div>`,
-    iconSize: [size, size],
-    iconAnchor: [anchor, anchor]
+    ">${busIcon}</div></div>`,
+    iconSize: [size * 2.6, size * 2.6],
+    iconAnchor: [size * 1.3, size * 1.3]
   });
 
   const marker = L.marker([lieu.lat, lieu.lng], { icon }).addTo(map);

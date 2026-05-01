@@ -159,8 +159,8 @@
       "nom": "Studio CopperCrib",
       "adresse": "10 Rue Perreault E",
       "horaires": "21 h à 3 h",
-"lat": 48.23800,
-"lng": -79.01979,
+      "lat": 48.238,
+      "lng": -79.01979,
       "categorie": "Performance",
       "activites": [
         {
@@ -172,7 +172,7 @@
           "horaire": "21 h à 21 h 15"
         },
         {
-          "titre": "Jeu de type Just Dance",
+          "titre": "Expérience immersive",
           "horaire": "21 h 15 à 22 h"
         },
         {
@@ -194,8 +194,8 @@
       "nom": "Studio Adéquat",
       "adresse": "173 avenue Principale",
       "horaires": "21 h 30 à 22 h 30",
-"lat": 48.23850,
-"lng": -79.01991,
+      "lat": 48.2385,
+      "lng": -79.01991,
       "categorie": "Balado",
       "activites": [
         {
@@ -209,13 +209,13 @@
       "nom": "Productions Chien pas de médaille",
       "adresse": "Vieux-Noranda",
       "horaires": "21 h 30 à 22 h 30",
-      "lat": null,
-      "lng": null,
+      "lat": 48.24827308595385,
+      "lng":  -79.01689589670548,
       "categorie": "Installation",
       "activites": [
         {
-          "titre": "Installation surprise dans le Vieux-Noranda",
-          "details": "Collaboration - Finissants et finissantes au baccalauréat en création numérique"
+          "titre": "Respirer la nuit",
+          "details": "Installation surprise - Finissants et finissantes au baccalauréat en création numérique"
         }
       ]
     },
@@ -230,10 +230,6 @@
       "activites": [
         {
           "titre": "Projection documentaire sur la grève des fros",
-          "details": "Finissants et finissantes à la maîtrise en création numérique"
-        },
-        {
-          "titre": "Jeu vidéo Frayures",
           "details": "Finissants et finissantes à la maîtrise en création numérique"
         }
       ]
